@@ -49,7 +49,7 @@ class ContactService {
         });
     }
 
-    async update(id, payload){
+    async update(id, payload) {
         const filter = {
             _id: ObjectId.isValid(id) ? new ObjectId(id):null,
         };
@@ -59,21 +59,21 @@ class ContactService {
             {$set: update},
             {returnDocument: "after"}
         );
-        return result.value; // or return result;
+        return result.value; //return result;
     }
     
-    async delete(id){
+    async delete(id) {
         const result = await this.Contact.findOneAndDelete({
             _id: ObjectId.isValid(id) ? new ObjectId(id) : null,
         });
         return result;
     }
 
-    async findFavorite(){
+    async findFavorite() {
         return await this.find({favorite: true});
     }
 
-    async deleteAll(){
+    async deleteAll() {
         const result = await this.Contact.deleteMany({});
         return result.deletedCount;
     }
