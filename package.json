@@ -1,5 +1,5 @@
 {
-  "name": "contactbook-backend_1",
+  "name": "contactbook-backend_2",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0"
   },
   "devDependencies": {
     "eslint": "^9.38.0",
