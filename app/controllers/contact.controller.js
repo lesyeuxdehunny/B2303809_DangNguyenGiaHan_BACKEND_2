@@ -120,7 +120,7 @@ exports.deleteAll = async(_req, res, next) => {
             message: `${deletedCount} contacts were deleted successfully`,
         });
     }
-    catch (error){
+    catch (error) {
         return next(
             new ApiError(500, "An error occurred while removing all contacts")
         );
